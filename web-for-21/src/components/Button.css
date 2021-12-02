@@ -8,6 +8,9 @@
     outline: none;
     border: none;
     cursor: pointer;
+    font-family: 'Teko', sans-serif;
+    font-size: medium;
+
     
 }
 
@@ -15,6 +18,7 @@
     background-color: var(--primary);
     color: #242424;
     border: 1px solid var(--primary);
+    font-family: 'Teko', sans-serif;
 }
 
 .btn-outline {
@@ -23,11 +27,16 @@
     padding: 8px 20px;
     border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
+    font-family: 'Teko', sans-serif;
+    font-size: medium;
 }
 
 .btn--medium{
     padding: 8px 20px;
     font-size: 20px;
+    font-family: 'Teko', sans-serif;
+    font-size: medium;
+    
 }
 
 .btn--medium:hover, .btn--large:hover{
