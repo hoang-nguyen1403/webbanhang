@@ -1,0 +1,33 @@
+.img-custom{
+    /* height: 70vh!important; */
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%!important;
+}
+
+.custom-col{
+    padding: 0  0 0 0;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+.header-border{
+    border-bottom: 1px solid black;
+    /* border-top: 1px solid black; */
+  }
+
+.product-info-box{
+
+    /* border: 1px solid black; */
+    /* margin-right: 10%; */
+    padding-right: 0;
+    padding-left: 0;
+}
+.row{
+    padding: 0 0 0 0;
+    margin:  0 0 0 0;
+}
+
+.custom-btn{
+    border: none!important;
+
+}

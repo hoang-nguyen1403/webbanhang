@@ -6,29 +6,9 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      {/* <video src='/videos/video-2.mp4' autoPlay loop muted /> */}
-      {/* <img src='/images/img-main-home.jpg' /> */}
-
-      <h1>21 SALVADOR </h1>
-      <h2>"BECOME OUR BEST FRIEND"</h2>
-      <p>What are you waiting for?</p>
-      <div className='hero-btns'>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          GET STARTED
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('hey')}
-        >
-          SHOPPING NOW 
-        </Button>
-      </div>
+     <h1 className='display-3 align-top'>21 SALVADOR </h1>
+    <h2 className='display-2 align-top'>OFFICALLY IN SAI GON</h2>
+    
     </div>
   );
 }

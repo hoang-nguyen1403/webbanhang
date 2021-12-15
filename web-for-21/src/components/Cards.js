@@ -1,78 +1,35 @@
-import React from 'react'
-import CardItem from './CardItem'
+import React, { useEffect, useState } from "react";
+import LargeCard from './LargeCard'
+import Tshirt from './Tshirt'
+import Pant from "./Pant";
 import "./Cards.css"
+
+
 function Cards() {
     return (
         <div className="cards">
-            <h1>LET OUR PRODUCT BE YOUR SPECIAL ITEM</h1>
-            {/* <div className="cards__wrapper">
-                <ul className='cards__items'>
-                    <CardItem
-                        src='images/hinh_chinh_3.jpg'
-                        text=''
-                        label=''
-                        path='/services'
-                    />
-                    <CardItem
-                        src='images/hinh_chinh_4.jpg'
-                        text=''
-                        label=''
-                        path='/services'
-                    />
-                </ul>
+            {/* <h1 class='header-border'>LET OUR PRODUCT BE YOUR SPECIAL ITEM</h1> */}
+            <div class="row align-items-center my-5 justify-content-md-center" >
+                <div class="col-lg-4 ">
+                    <LargeCard src="/images/21Salvador4703-Edit.jpg" title="t-shirt1" path ='/products/tshirt'            />
+                </div>
+                <div class="col-lg-4">
+                    <LargeCard src="/images/21Salvador4743-Edit.jpg" title="PANT" path ='/products/pant'/>
+                </div>
             </div>
-            <h1>TOP</h1>
-            <div className="cards__wrapper">
-                <ul className='cards__items'>
-                    <CardItem
-                        src='images/MAT_SAU_5.jpg'
-                        text=''
-                        label='Mystery'
-                        path='/services'
-                    />
-                    <CardItem
-                        src='images/MAT_SAU_6.jpg'
-                        text=''
-                        label='Adventure'
-                        path='/products'
-                    />
-                    <CardItem
-                        src='images/MAT_SAU_4.jpg'
-                        text='Ride through the Sahara Desert on a guided camel tour'
-                        label='Adrenaline'
-                        path='/sign-up'
-                    />
-
-                </ul>
+            <h1 class='header-border'>OUR PRODUCTS</h1>
+            <h1 >
+            <a href='#tshirt'> T-SHIRT </a>|
+            <a href='#pant'> PANT </a>
+            <div id="tshirt" class="row align-items-center my-5 justify-content-md-center" >
+                <Tshirt /> 
             </div>
-            <div className="cards__wrapper">
-                <ul className='cards__items'>
-                    <CardItem
-                        src='images/MAT_SAU_1.jpg'
-                        text='Experience Football on Top of the Himilayan Mountains'
-                        label='Adventure'
-                        path='/products'
-                    />
-                    <CardItem
-                        src='images/MAT_SAU_3.jpg'
-                        text='Ride through the Sahara Desert on a guided camel tour'
-                        label='Adrenaline'
-                        path='/sign-up'
-                    />
-                    <CardItem
-                        src='images/MAT_SAU_2.jpg'
-                        text='Experience Football on Top of the Himilayan Mountains'
-                        label='Adventure'
-                        path='/products'
-                    />
-                    <CardItem
-                        src='images/MAT_SAU_7.jpg'
-                        text='Ride through the Sahara Desert on a guided camel tour'
-                        label='Adrenaline'
-                        path='/sign-up'
-                    />
-                </ul>
-            </div> */}
+            <h1 class='header-border'>PANTS</h1>
+            <div id='pant' class="row align-items-center my-5 justify-content-md-center" >
+                <Pant />
+            </div>
+            </h1>
+            
         </div>
     )
 }

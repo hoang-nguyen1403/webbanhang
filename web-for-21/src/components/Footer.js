@@ -11,7 +11,7 @@ function Footer() {
           Join the Adventure newsletter to receive our best vacation deals
         </p>
         <p className='footer-subscription-text'>
-          You can unsubscribe at any time.
+          Give me your email to get a friendly discount
         </p>
         <div className='input-areas'>
           <form>
@@ -45,18 +45,9 @@ function Footer() {
         </div>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
-            <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
-          </div>
-          <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <a href='https://www.facebook.com/21Salvador.Offical'>Instagram</a>
+            <a href='https://www.instagram.com/21salvador.clothing/'>Facebook</a>
           </div>
         </div>
       </div>
@@ -64,15 +55,14 @@ function Footer() {
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-              TRVL
-              <i class='fab fa-typo3' />
+            <img className='logo-img' src='/images/logo.png' />
             </Link>
           </div>
-          <small class='website-rights'>TRVL © 2020</small>
+          <small class='website-rights'>21 SALVADOR © 2021</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
-              to='/'
+              to='https://www.facebook.com/21Salvador.Offical'
               target='_blank'
               aria-label='Facebook'
             >
@@ -80,36 +70,13 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link instagram'
-              to='/'
+              to='https://www.instagram.com/21salvador.clothing/'
               target='_blank'
               aria-label='Instagram'
             >
               <i class='fab fa-instagram' />
             </Link>
-            <Link
-              class='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <i class='fab fa-youtube' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i class='fab fa-twitter' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i class='fab fa-linkedin' />
-            </Link>
+            
           </div>
         </div>
       </section>

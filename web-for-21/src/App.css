@@ -5,11 +5,15 @@
 .body {
   overflow-x: hidden;
   font-family: 'Teko', sans-serif;
-    width: 100%; padding: 0 0; margin: 0 0;
+  width: 100%; padding: 0 0; margin: 0 0;
 }
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.header-border{
+  border-bottom: 1px solid black;
+  /* border-top: 1px solid black; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
