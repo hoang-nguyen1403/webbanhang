@@ -1,28 +1,41 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './components/pages/Home.jsx'
-import Services from './components/pages/Services';
 import About from './components/pages/About.jsx';
 import Products from './components/pages/Products.jsx';
-import SignUp from './components/pages/SignUp.jsx';
+import Pant from './components/Pant';
+import Tshirt from './components/Tshirt';
+import Footer from './components/Footer';
+import ProductsPant from './components/pages/ProductPants';
+import ProductView from './components/pages/ProductView';
+import Cart from './components/Cart/Cart';
+import { connect } from "react-redux";
 
 function App() {
   return (
-    <>
-      <Router>
-      <Navbar></Navbar>
-        <Home />
-        <Routes>
-          <Route path='/' exact component={Home}></Route>
-          <Route path='/about' component={About} />
-          <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/about" element={<About/>} /> 
+            <Route path="/products" element={<Products/>} />
+            <Route path="/pants" element={<Pant/>} />
+            <Route path="/tshirt" element={<Tshirt/>} />
+            <Route path="/cart" element={<Cart/>} />
+            <Route path="/products/pant" element={<ProductsPant />}/>
+            <Route path="/products/tshirt" element={<Products />}></Route>
+            <Route path="/products/tshirt/:name" element={<ProductView/>}></Route>
+      </Routes>
+      <Footer/>
+  </Router>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    current: state.shop.currentItem,
+  };
+};
+
+export default connect(mapStateToProps)(App);

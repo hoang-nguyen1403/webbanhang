@@ -2,18 +2,23 @@ import React from 'react'
 import "./Cards.css"
 import SmallCard from './SmallCard'
 
-
+import productInformation from './data_information'
 
 
 function Pant() {
+    const tshirt_data = productInformation
+    const pant1 = tshirt_data['BLACK PANT']
+    const pant2 = tshirt_data['BLUE DENIM PANT']
     return (
         <div className="cards">
-        <div class="row align-items-center  justify-content-center my-5">
-            <div class="col-lg-3">
-                <SmallCard path="/images/21Salvador4738-Edit.jpg" />
+        <div className="row align-items-center  justify-content-center my-5">
+            <div className="col-lg-3">
+                <SmallCard path={pant1.url1} name={pant1.name} ID={8}
+                price={pant1.price} />
             </div>
-            <div class="col-lg-3">
-                <SmallCard path="/images/21Salvador4748-Edit.jpg" />
+            <div className="col-lg-3">
+                <SmallCard path={pant2.url1} name={pant2.name} ID={9}
+                price={pant2.price} />
             </div>
         </div>
     </div>

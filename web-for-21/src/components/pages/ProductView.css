@@ -4,6 +4,19 @@
     padding-left: 0;
     width: 100%!important;
 }
+.info-form{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.custom_text_insta{
+    color: black;
+}
+.custom_text_faceb{
+    color: lightskyblue;}
+.my-modal {
+    width: 60vw;    /* Occupy the 90% of the screen width */
+    max-width: 70vw;
+}
 
 .custom-col{
     padding: 0  0 0 0;

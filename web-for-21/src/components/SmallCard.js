@@ -1,20 +1,31 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './smallCard.css'
 import { Link } from 'react-router-dom'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useParams } from 'react-router-dom';
 
+// Redux
+import { connect } from "react-redux";
+import {
+    loadCurrentItem,
+    addToCart,
+} from '../components/redux/Shopping/shopping-actions'
 
-function SmallCard(props) {
-    
+// function (props, addToCart) {
+const SmallCard = ({ ID, path, name, price,addToCart }) => {
+
     return (
-        <div class="card smallCard" >
-            <img class="card-img-top" src={props.path} />
-            <div class="card-body">
-                <h5 class="card-title display-4">{props.name}</h5>
-                <p class="card-text">Price: ##0.000 VND</p>
-                <Link to={`/products/tshirt/${props.name}/`} class="btn btn-dark text-secondary w-25 ">View</Link>
-                <a href="#" class="btn btn-dark  text-secondary w-25 ">Buy</a>
+        <div className="card smallCard" >
+            <img className="card-img-top" src={path} />
+            <div className="card-body">
+                <p className="card-title"><b>{name}</b></p>
+                <p className="card-text">Giá: {price} VND</p>
+                <Link to={`/products/tshirt/${name}/`} class="btn btn-dark text-secondary w-50 ">Chi tiết </Link>
+                {/* <a href="#" class="btn btn-dark  text-secondary w-25 ">Buy</a> */}
+                {/* <button
+                    onClick={() => addToCart(ID)}
+                    className="btn btn-dark  text-secondary w-50"
+                >
+                 Mua Ngay
+                </button> */}
             </div>
 
         </div>
@@ -22,4 +33,13 @@ function SmallCard(props) {
     )
 }
 
-export default SmallCard
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addToCart: (id) => dispatch(addToCart(id)),
+        loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+    };
+};
+
+// export default SmallCard
+
+export default connect(null, mapDispatchToProps)(SmallCard);

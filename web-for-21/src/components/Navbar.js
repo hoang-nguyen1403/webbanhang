@@ -1,14 +1,16 @@
-import { NavLink} from "react-router-dom"
-import { Button } from './Button'
+import { NavLink } from "react-router-dom"
 import './Navbar.css'
 import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
+
 // import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
-function Navbar() {
+const Navbar = ({ cart }) => {
     const [click, setClick] = useState(false)
     const [button, setButton] = useState(true)
     const [navbar, setNavbar] = useState(false)
+    const [cartCount, setCartCount] = useState(0)
  
     const handleClick = () => setClick(!click)
     const closeMobileMenu = () => setClick(false)
@@ -23,27 +25,25 @@ function Navbar() {
     useEffect(() => {
         showButton()
     }, []);
+    window.addEventListener('resize', showButton);
 
+    useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
 
-    window.addEventListener('resize', showButton); 
-    const changeBackground = () =>{
-        if (window.scrollY >= 80){
-            setNavbar(true);
-        } else{
-            setNavbar(false);
-        }
-    }
-    window.addEventListener('scroll', changeBackground)
+    setCartCount(count);
+  }, [cart, cartCount]);
+
 
     return (
         <>
-            <nav className={ navbar ? 'navbar active' : 'navbar'}>
+            <nav className={navbar ? 'navbar active' : 'navbar'}>
                 <div className='navbar-container'>
                     <NavLink to='/' className='navbar-logo' onClick={closeMobileMenu}>
                         <img className='logo-img' src='/images/logo.png' />
                     </NavLink>
-                    
-
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-time' : 'fas fa-bars'}></i>
                     </div>
@@ -57,15 +57,25 @@ function Navbar() {
                         <li className='nav-item'>
                             <NavLink to='/products' className='nav-links' onClick={closeMobileMenu}> Products </NavLink>
                         </li>
+                        {/* <li className='nav-item'>
+                            <NavLink to='/cart' className='nav-links' onClick={closeMobileMenu}>Shopping Cart {cartCount}
+                                
+                            </NavLink>
+                        </li>    */}
+
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>Sign Up</Button>}
                 </div>
             </nav>
-
-
-
         </>
     )
 }
 
-export default Navbar
+const mapStateToProps = (state) => {
+    return {
+      cart: state.shop.cart,
+    };
+  };
+
+
+export default connect(mapStateToProps)(Navbar);
+

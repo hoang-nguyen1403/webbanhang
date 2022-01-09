@@ -1,53 +1,30 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Join the Adventure newsletter to receive our best vacation deals
-        </p>
-        <p className='footer-subscription-text'>
-          Give me your email to get a friendly discount
-        </p>
-        <div className='input-areas'>
-          <form>
-            <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Your Email'
-            />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
-          </form>
-        </div>
+        <h1 className='footer-subscription-heading'>
+          21 SALVADOR
+        </h1>
       </section>
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='/about'>How it works</Link>
           </div>
           <div class='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
+            <h2>Contact</h2>
+            <Link to='/about'>Contact</Link>
+            <Link to='/about'>Support</Link>
           </div>
-        </div>
-        <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <a href='https://www.facebook.com/21Salvador.Offical'>Instagram</a>
-            <a href='https://www.instagram.com/21salvador.clothing/'>Facebook</a>
+            <a href='https://www.facebook.com/21Salvador.Offical'>Facebook</a>
+            <a href='https://www.instagram.com/21salvador.clothing/'> Instagram</a>
           </div>
         </div>
       </div>
@@ -60,22 +37,12 @@ function Footer() {
           </div>
           <small class='website-rights'>21 SALVADOR © 2021</small>
           <div class='social-icons'>
-            <Link
-              class='social-icon-link facebook'
-              to='https://www.facebook.com/21Salvador.Offical'
-              target='_blank'
-              aria-label='Facebook'
-            >
+            
+            <a class='social-icon-link facebook' href='https://www.facebook.com/21Salvador.Offical'>
               <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
-              class='social-icon-link instagram'
-              to='https://www.instagram.com/21salvador.clothing/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i class='fab fa-instagram' />
-            </Link>
+              </a>
+
+            <a class='social-icon-link instagram' href='https://www.instagram.com/21salvador.clothing/'><i class='fab fa-instagram' /></a>
             
           </div>
         </div>

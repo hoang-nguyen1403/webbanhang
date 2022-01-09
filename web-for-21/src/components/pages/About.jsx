@@ -3,7 +3,7 @@ import '../style/About.css'
 
 const About = () => {
   return (
-    <div class="container">
+    <div className="container">
       {/* <div class="row align-items-center my-5">
         <div class="col-lg-12">
           <div class="card bg-dark text-white">
@@ -16,21 +16,30 @@ const About = () => {
         </div>
       </div> */}
 
-      <div class="row align-items-center my-5">
-        <div class="col-lg-7">
+      <div className="row align-items-center my-5">
+        <div className="col-lg-7">
           <img
-            class="img-fluid rounded mb-4 mb-lg-0"
+            className="img-fluid rounded mb-4 mb-lg-0"
             src='/images/hinh_chinh_1.jpg'
             alt="about-img"
           />
         </div>
-        <div class="col-lg-5">
-          <h1 class="font-weight-light">About</h1>
+        <div className="col-lg-5">
+          <h1 className="font-weight-light">About Us</h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book.
+            <b>21 SALVADOR </b><br/>
+            Quần áo (Thương hiệu)<br/>
+            Online Store.<br/>
+            Based in SaiGon.<br/>
+            Hotline: 0763838391.<br/>
+            Email: 21.2121salvador@gmail.com<br/>
+            
+            Những sản phẩm đến từ 21 Salvador có chất liệu là 100% cotton, được in ép nhiệt với công nghệ kỹ thuật
+            cao và công nghệ may áo ống, không có đường chỉ bên hông áo. hằm mang tới cho khách hàng những sản phẩm
+             có chất lượng tốt nhất, thoáng mát, làm tôn lên cách 
+            tính riêng của từng sản phẩm. <br></br>
+            Xin quý khách vui lòng inbox cho page để được tư vấn chi tiết và biết thêm những sản phẩm khác. <br/>
+            Xin cám ơn.
           </p>
         </div>
       </div>

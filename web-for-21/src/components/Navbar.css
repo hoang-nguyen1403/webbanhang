@@ -1,5 +1,9 @@
+
 .navbar {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+
+  font-family: 'Teko', sans-serif !important;
+  font-size: 25px;
 
   /* background: transparent; */
   height: 80px;
@@ -63,6 +67,11 @@
 
 .nav-item {
   height: 80px;
+  font-size: 25px;
+}
+
+.nav-link {
+  line-height: 20;
 }
 
 .nav-links {
@@ -72,6 +81,7 @@
   text-decoration: none;
   padding: 0rem 1rem;
   height: 80px;
+  line-height: 80px;
 }
 
 .nav-links:hover {

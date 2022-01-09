@@ -1,6 +1,7 @@
 .cards {
   padding: 4rem;
   /* background:rgba(210,168,142,255); */
+  padding-top: 0;
 }
 
 h1 {

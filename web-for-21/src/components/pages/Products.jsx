@@ -1,33 +1,28 @@
 import React from 'react';
 import '../../App.css';
-import LargeCard from '../LargeCard';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom"
 import Tshirt from '../Tshirt';
-import Pant from '../Pant';
 
 export default function Products() {
   return <>
     <>
-      <div class="row align-items-center my-5 justify-content-md-center" >
-        <div class="col-lg-4 ">
-          <h1 class='header-border'>Our Products</h1>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur venenatis
-            imperdiet aenean eu velit maecenas integer. Viverra mauris mauris scelerisque
-            pulvinar nibh sed sit sodales.</p>
+      <div className="row align-items-center my-5 justify-content-md-center" >
+        <div className="col-lg-8 ">
+          <h1 className='header-border'>Our Products</h1>
+          <p> Tất cả những sản phẩm trong bộ sưu tập đầu tiên được bày bán tại đây. Chắc chắn bạn sẽ tìm thấy được những sản phẩm ưng ý nhất.</p>
         </div>
       </div>
-      <div class="row  justify-content-md-center" >
-        <div class="col-lg-4 ">
-           <Link to='/products/tshirt' class="  w-50 p-3  text-size "><h1 className='header-border'> Tshirt </h1></Link>
-
+      <div className="row  justify-content-md-center" >
+        <div className="col-lg-2 custom-column">
+          <p className="h4"> Danh mục sản phẩm </p>
+          <Link to='/products/tshirt' className="w-100  text_custom_style"><p className='header-border'>+  Tee </p></Link>
+          <Link to='/products/pant' className="w-100  text_custom_style"><p className='header-border'>+ Pant </p></Link>
         </div>
-        <div class="col-lg-4 ">
-           <Link to='/products/pant' class="  w-50 p-3  text-size"><h1 className='header-border'> Pant </h1></Link>
 
+        <div className="col-lg-10 ">
+          <Tshirt/>
         </div>
       </div>
-      <Tshirt/>
   
     </>
   </>;
